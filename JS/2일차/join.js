@@ -11,7 +11,7 @@ form.addEventListener("submit",function(event){
     let userPosition = event.target.position.value
     let userGender = event.target.gender.value
     let userEmail = event.target.email.value
-    let userIntro = event.target.intro.value
+    let userIntro = event.target.Intro.value
 
   // ID 오류
     if(userID.length < 6){
