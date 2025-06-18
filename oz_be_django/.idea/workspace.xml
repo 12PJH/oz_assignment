@@ -5,15 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af932d34-5b55-4473-8338-c6aed303f25c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/077e0723-6a75-46f7-b031-889d8a0df1d6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/077e0723-6a75-46f7-b031-889d8a0df1d6/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2ae3620-a3f6-47d8-a4e7-f901cfecdf0f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b2ae3620-a3f6-47d8-a4e7-f901cfecdf0f/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/oz_be_django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/oz_be_django.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boards/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/boards/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boards/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/boards/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feeds/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/feeds/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feeds/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/feeds/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +64,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.콘솔 글꼴&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -83,8 +96,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
-        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
+        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
       </set>
     </attachedChunks>
   </component>
@@ -99,7 +112,19 @@
       <workItem from="1750052108630" duration="415000" />
       <workItem from="1750052525796" duration="1252000" />
       <workItem from="1750053800393" duration="92000" />
-      <workItem from="1750053899948" duration="757000" />
+      <workItem from="1750053899948" duration="909000" />
+      <workItem from="1750055648249" duration="1547000" />
+      <workItem from="1750122083700" duration="4222000" />
+      <workItem from="1750127576433" duration="1808000" />
+      <workItem from="1750132577761" duration="670000" />
+      <workItem from="1750147876274" duration="81000" />
+      <workItem from="1750208112703" duration="119000" />
+      <workItem from="1750208241270" duration="6745000" />
+      <workItem from="1750220112996" duration="362000" />
+      <workItem from="1750221896436" duration="1316000" />
+      <workItem from="1750223217035" duration="1218000" />
+      <workItem from="1750224465707" duration="920000" />
+      <workItem from="1750225389189" duration="275000" />
     </task>
     <servers />
   </component>
