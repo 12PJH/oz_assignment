@@ -141,3 +141,39 @@
 ---
 ## 실습 사진
 ![실습 사진](./images/실습사진.png)
+
+---
+## **5일차 - Django REST framework**
+#### **REST(Representational State Transfer)**
+    - Representaional = 표현
+    - State = 상태
+    - Transfer = 전송(클라이언트 <==> 서버 사이의 전송)
+
+#### **API(Application Programming Interface)**
+    - 프로그램간의 상호작용을 뜻한다. (데이터 교환)
+
+#### **REST API**
+    - 자원의 이름으로 표현(URI)하고, HTTP 메서드로 자원의 상태를 주고 받는 방식이다.
+    - 구성요소
+        1. 자원(Resource): URI로 표현(클라이어는 URI형식으로 서버에 데이터 요청)
+        2. HTTP 메서드: 자원의 상태를 주고 받는 방법
+            - GET: 자원 조회 (READ)
+            - POST: 자원 생성 (CREATE)
+            - PUT: 자원 전체 수정 (UPDATE)
+            - DELETE: 자원 삭제 (DELETE)
+
+#### **Serializer**
+    - 클라이언트는 Django 객체를 이해할 수 없기 때문에 Django 객체를 JSON 형태로 변환해주는 역할을 한다.
+    - 직렬화(Django(객체) => JSON), 역직렬화(JSON => Django(객체))
+    - 코드 구조
+        # users/serializers.py
+        from rest_framework.serializers import ModelSerializer
+        from .models import User
+        
+        class UserSerializer(ModelSerializer):
+            class Meta:
+                model = User
+                fields = "__all__" # Model의 전체 field 가져옴
+                fields = ("nickname", "email") # 원하는 특정 field만 가져옴
+                exclude = ("password",) # 특정 field 제외 가능
+    
