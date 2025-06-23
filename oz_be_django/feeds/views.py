@@ -1,19 +1,32 @@
-from rest_framework.response import Response
+from django.shortcuts import render
 from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
 from .models import Feed
 from .serializers import FeedSerializer
-from rest_framework.exceptions import NotFound
-
 
 class Feeds(APIView):
     # 전체 게시글 데이터 조회
     def get (self, request):
         feeds = Feed.objects.all()
-
         # 객체 -> JSON으로 시리얼라이즈
         serializer = FeedSerializer(feeds, many=True)
 
         return Response(serializer.data)
+
+    def post(self, request):
+        # 역질렬화(클라이언트가 보내준 JSON -> 객체)
+        serializer = FeedSerializer(data=request.data)
+
+        if serializer.is_valid():
+            feed = serializer.save(user=request.user)
+            serializer = FeedSerializer(feed)
+            # print("post serializer", serializer)
+
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
+
 
 class FeedDetail(APIView):
     def get_object(self, feed_id):

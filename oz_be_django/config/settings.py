@@ -44,6 +44,7 @@ CUSTOM_USER_APPS = [
     'users.apps.UsersConfig',
     'rest_framework',
     "feeds.apps.FeedsConfig",
+    "reviews.apps.ReviewsConfig",
 ]
 
 INSTALLED_APPS = DJANGO_SYSTEM_APPS + CUSTOM_USER_APPS

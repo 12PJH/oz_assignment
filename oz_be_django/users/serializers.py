@@ -6,3 +6,8 @@ class FeedUserSerializer(ModelSerializer):
         model = User
         # fields = "__all__"
         fields = ("username", "email", "is_superuser",)
+
+class MyInfoUserSerializer(ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
