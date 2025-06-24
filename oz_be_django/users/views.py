@@ -5,6 +5,8 @@ from rest_framework.exceptions import NotFound, ParseError
 from .serializers import MyInfoUserSerializer
 from django.contrib.auth.password_validation import validate_password
 
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # api/v1/users [POST] => 유저 API 생성
 from rest_framework.views import APIView
@@ -34,6 +36,9 @@ class Users(APIView):
 
 # api/v1/users/MyInfo [GET, PUT]
 class MyInfo(APIView):
+    authentication_classes = [TokenAuthentication,]
+    permission_classes = [IsAuthenticated,]
+
     def get(self, request):
         user = request.user
         serializer = MyInfoUserSerializer(user)

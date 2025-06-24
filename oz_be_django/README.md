@@ -176,4 +176,32 @@
                 fields = "__all__" # Model의 전체 field 가져옴
                 fields = ("nickname", "email") # 원하는 특정 field만 가져옴
                 exclude = ("password",) # 특정 field 제외 가능
+---
+## **6일차 - Django REST framework**
+#### **partial=True**
+    - 모델 인스턴스 업데이트 할 때 모든 필드에 대한 데이터가 필요한데 "partial=True"를 
+    사용하면 일부 필드만 업데이트할 수 있도록 해주는 기능이다.
+
+#### **many, read_only**
+    - many=True: 다수의 객체를 직렬화할 때 사용한다. (예: 여러 사용자 정보를 반환할 때)
+    - read_only=True: 해당 필드는 읽기 전용으로 설정하여 클라이언트가 해당 필드를 수정할 수 없도록 한다.
+
+#### **IsAuthenticated**
+    - IsAuthenticated는 Django REST framework의 인증 클래스 중 하나로, 사용자가 인증된 경우에만 API에 접근할 수 있도록 제한한다.
+    - 인증되지 않은 사용자가 API에 접근하려고 하면 401 Unauthorized 응답을 반환한다.
+    - settings.py 파일에서 REST_FRAMEWORK 설정에 추가하여 사용할 수 있다.
+
+---
+## **7일차 - Django REST framework**  
+#### **authToken**
+    - Django REST framework에서 제공하는 인증 시스템으로, 사용자가 로그인할 때 토큰을 발급받고,
+    이후 API 요청 시 이 토큰을 사용하여 인증을 수행한다.
+    - authToken은 Django의 기본 User 모델과 연결되어 있으며, 사용자가 로그인할 때 생성된다.
+
+#### **TokenAuthentication**
+    - TokenAuthentication은 Django REST framework에서 제공하는 인증 클래스 중 하나로, 사용자가 API 요청 시 토큰을 사용하여 인증을 수행한다.
+    - settings.py 파일에서 REST_FRAMEWORK 설정에 추가하여 사용할 수 있다.
+
+#### **IsAuthenticated**
+    - IsAuthenticated는 Django REST framework의 인증 클래스 중 하나로, 사용자가 인증된 경우에만 API에 접근할 수 있도록 제한한다.
     
