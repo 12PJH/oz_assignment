@@ -204,4 +204,71 @@
 
 #### **IsAuthenticated**
     - IsAuthenticated는 Django REST framework의 인증 클래스 중 하나로, 사용자가 인증된 경우에만 API에 접근할 수 있도록 제한한다.
-    
+---
+## **8일차 - Django Authentication**
+    - **SQL 방식**
+        - 기본적으로는 ORM(Objects-Relational Mapping)방식으로 데이터베이스 작업을 하지만, 복잡하거나 특정한 작업을 할 때에는 
+          SQL 쿼리를 직접 작성할 수도 있다.
+    - **파라미터화된 쿼리**
+        - SQL 쿼리에서 데이터를 직접 입력하는 대신, 외부에서 값을 전달받아 사용하는 쿼리를 뜻한다.
+    - **예시**
+        1. **로그인 쿼리**
+        
+            ```python
+            cursor.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+            ```
+        
+        2. **댓글 삽입**
+        
+            ```python
+            cursor.execute("INSERT INTO comments (comment) VALUES (%s)", [comment])
+            ```
+            
+       3. **사용자 삭제**
+        
+           ```python
+           cursor.execute("DELETE FROM users WHERE id = %s", [user_id])
+           ```
+        
+       4. **제품 검색**
+        
+           ```python
+           cursor.execute("SELECT * FROM products WHERE name LIKE %s", ['%' + product_name + '%'])
+           ```
+        
+       5. **이메일 업데이트**
+        
+           ```python
+           cursor.execute("UPDATE users SET email = %s WHERE username = %s", (new_email, username))
+           ```
+
+#### **Django Auth Login, Logout**
+    - Django는 기본적으로 인증 시스템을 제공하며, 로그인과 로그아웃 기능을 쉽게 구현할 수 있다.
+    - 로그인 시에는 사용자의 자격 증명을 확인하고, 세션을 생성하여 사용자를 인증한다.
+    - 로그아웃 시에는 세션을 종료하고, 사용자를 인증 해제한다.
+
+#### **Django JWT**
+    - JWT(Json Web Token)는 JSON 포맷을 사용하여 사용자에 대한 속성을 저장하는 토큰입니다.
+      주로 사용자 인증 및 권한 부여를 위해 사용되며,
+      서버는 사용자 로그인 시 JWT를 생성하여 클라이언트에게 전달하고,
+      클라이언트는 이후 요청마다 해당 토큰을 포함시켜 인증을 진행합니다.
+
+#### **Simple JWT**
+    Django REST framework에서 JWT 인증을 쉽게 구현할 수 있도록 도와주는 라이브러리입니다.
+기본적으로 액세스 토큰과 리프레시 토큰을 관리하며, 인증 로직을 추상화하여 복잡한 구현 없이 JWT 기반 인증 기능을 사용할 수 있게 합니다.
+
+
+### **Simple JWT와의 차이점**
+    1. **수동 토큰 생성**:
+        - 사용자가 제공한 자격 증명을 **`authenticate`** 함수로 검증합니다.
+        - 유효한 자격 증명인 경우, **`jwt.encode`**를 사용하여 직접 JWT 토큰을 생성합니다.
+        - 이 방식은 토큰의 구조와 내용을 완전히 제어할 수 있게 해줍니다.
+        - 별도의 라이브러리(**`PyJWT`**)를 사용합니다.
+
+    2. **`django-rest-framework-simplejwt` 사용 (Simple JWT)**:
+        - **`TokenObtainPairView`** 및 관련 뷰를 사용하여 자격 증명을 검증하고 토큰을 발급합니다.
+        - 토큰 생성 및 검증 로직이 라이브러리에 내장되어 있어 복잡한 구현을 요구하지 않습니다.
+        - 액세스 토큰과 리프레시 토큰을 자동으로 관리합니다.
+        - **`django-rest-framework-simplejwt`** 설정을 통해 토큰 동작을 조정할 수 있습니다.
+
+---
