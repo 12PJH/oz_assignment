@@ -272,3 +272,19 @@
         - **`django-rest-framework-simplejwt`** 설정을 통해 토큰 동작을 조정할 수 있습니다.
 
 ---
+
+## **9일차 - Django TestCode**
+    - Django TestCode는 Django 애플리케이션의 기능을 검증하기 위해 작성하는 테스트 코드입니다.
+    - Django는 기본적으로 테스트 프레임워크를 제공하며, 이를 사용하여 애플리케이션의 기능을 자동으로 검증할 수 있습니다.
+
+#### **Django TestCode 작성 순서**
+    1. **테스트 파일 생성**: 명령어 startapp을 하면 자동으로 생성되어 있는 tests.py 파일이 있다.
+        - APITestCase:APITestCase 클래스는 Django의 TestCase 클래스를 확장하여 작성된 REST framework의 클래스입니다.
+        DRF(Django REST Framework) 기반의 API 엔드포인트를 테스트하는 데 필요한 환경을 쉽게 구성할 수 있습니다.
+        -reverse: Django의 URL 관리 시스템의 일부입니다. URL 패턴의 이름을 기반으로 해당 URL을 동적으로 생성해 줍니다.
+                  이 함수는 URL을 하드코딩하지 않고 URL 패턴의 이름을 사용하여 URL을 찾아내므로 URL 구조가 변경되어도 코드를 수정할 필요가 없게 해줍니다.
+    2. **테스트 클래스 작성**: Django의 TestCase 클래스를 상속받아 테스트 클래스를 작성합니다.
+    3. **테스트 메서드 작성**: APITestCase을 상속받아 생성하여, 클래스는 REST framework의 기능을 확장하여 API 테스트에 필요한 추가적인 기능을 만든다.
+        - setUp 메서드 : 각 테스트 메서드가 실행되기 전에 호출됩니다. 이곳에서 테스트에 필요한 사용자나 객체를 생성할 수 있습니다.
+        - assertEqual / assertNotEqual : 두 값이 같은지 또는 다른지 확인합니다.
+    4. **테스트 실행**: `python manage.py test` 명령어를 사용하여 테스트를 실행합니다.
